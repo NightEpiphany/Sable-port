@@ -10,13 +10,13 @@ import org.spongepowered.asm.mixin.Unique;
 @Mixin(EntityRenderState.class)
 public class EntityRenderStateMixin implements EntityTransformationExtension {
     @Unique
-    private Quaternionf sable$orientation;
+    private Quaternionf sable$orientation = new Quaternionf();
 
     @Unique
-    private Vector3f sable$scale;
+    private Vector3f sable$scale = new Vector3f(1.0f, 1.0f, 1.0f);
 
     @Unique
-    private Vector3f sable$pivot;
+    private Vector3f sable$pivot = new Vector3f();
 
     @Override
     public void sable$setSubLevelOrientation(Quaternionf orientation) {

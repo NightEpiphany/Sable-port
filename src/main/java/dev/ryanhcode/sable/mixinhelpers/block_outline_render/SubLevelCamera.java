@@ -45,7 +45,7 @@ public class SubLevelCamera extends Camera {
         } else {
             this.pos = this.renderCamera.position();
             this.blockPosition.set(this.pos.x, this.pos.y, this.pos.z);
-            this.rotationYXZ.set(this.renderCamera.getXRot(), this.renderCamera.getYRot(), 0);
+            this.rotationYXZ.set(this.renderCamera.xRot(), this.renderCamera.yRot(), 0);
 
             final Quaternionf rotation = this.rotation();
             rotation.set(this.renderCamera.rotation());
@@ -79,7 +79,7 @@ public class SubLevelCamera extends Camera {
 
     @Override
     public Entity entity() {
-        return this.renderCamera.getEntity();
+        return this.renderCamera.entity();
     }
 
     @Override

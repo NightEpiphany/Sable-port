@@ -7,3 +7,6 @@ pluginManagement {
         gradlePluginPortal()
     }
 }
+
+// Title for the project
+rootProject.name = "Sable-26.3-fabric"
